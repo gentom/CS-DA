@@ -10,3 +10,6 @@ defmodule Recursion do
 end
 
 Recursion.print_multiple_times(50)
+
+IO.puts "....................."
+for x <- 0..10, do: IO.puts Enum.random(0..1000)
