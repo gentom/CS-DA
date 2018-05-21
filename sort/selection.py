@@ -40,9 +40,68 @@ def selection_sort(array):
         turnoverCount = counter(turnoverCount)
     print("ExchangeCountNum: {}".format(exchageCount))
     print("TurnoverCountNum: {}".format(turnoverCount))
-    print(array)
+    #print(array)
 
 if __name__ == "__main__":
-    l = RNAGen(100)
-    selection_sort(l)
+
+    print("---- Random Data ----")
+
+    l1 = RNAGen(100)
+    #print(l1)
+    selection_sort(l1)
     print()
+
+    l2 = RNAGen(200)
+    selection_sort(l2)
+    print()
+
+    l3 = RNAGen(300)
+    selection_sort(l3)
+    print()
+
+    l4 = RNAGen(400)
+    selection_sort(l4)
+    print()
+
+    l5 = RNAGen(500)
+    selection_sort(l5)
+    print()
+
+    print("---- Ascending Data ----")
+
+    data = RNAGen(100)
+    #print(data)
+    data.sort()
+    #print(data)
+    selection_sort(data)
+    print()
+
+    data = RNAGen(200)
+    #print(data)
+    data.sort()
+    #print(data)
+    selection_sort(data)
+    print()
+
+    data = RNAGen(300)
+    #print(data)
+    data.sort()
+    #print(data)
+    selection_sort(data)
+    print()
+
+    data = RNAGen(400)
+    #print(data)
+    data.sort()
+    #print(data)
+    selection_sort(data)
+    print()
+
+    data = RNAGen(500)
+    #print(data)
+    data.sort()
+    #print(data)
+    selection_sort(data)
+    print()
+
+    
