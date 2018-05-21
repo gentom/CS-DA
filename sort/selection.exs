@@ -1,3 +1,4 @@
+'''
 defmodule Selection do
   def sort(list) when is_list(list) do
     do_selection(list, [])
@@ -22,4 +23,33 @@ defmodule Selection do
     if e1 <= e2 do e1 else e2 end
   end
 end
+'''
+defmodule Selection do
+	def sort([]), do: []
+
+	def sort(list), do: sort(list, [])
+
+	defp sort([], sorted), do: sorted
+
+	defp sort(unsorted, sorted) do
+		maxx = select_max(unsorted, [])
+		reduced_unsorted = List.delete(unsorted, maxx)
+
+		sort(reduced_unsorted, [maxx | sorted])
+	end
+
+	defp select_max([], [maxx]), do: maxx
+
+	defp select_max([h | t], []),
+		do: select_max(t, [h])
+
+	defp select_max([h | t], [maxx]) do
+		if (h > maxx),
+			do: select_max(t, [h]),
+			else: select_max(t, [maxx])
+	end
+
+end
+
+
 IO.inspect Selection.sort([69,44,10,6,9,3,32,7,49,1,4])
