@@ -38,6 +38,21 @@ fn sort<T: PartialOrd>(source: &mut [T]) {
         }
     }
 }
+
+fn selection<T: TotalOrd>(xs: &mut [T]) {
+    let (mut i, len) = (0, xs.len());
+    while i < len {
+        let (mut j, mut cur_min) = (i + 1, i);
+        while j < len {
+            if xs[j] < xs[cur_min] {
+                cur_min = j;
+            }
+            j = j + 1;
+        }
+        xs.swap(i, cur_min);
+        i = i + 1;
+    }
+}
  
 fn main() {
  
