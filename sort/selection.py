@@ -67,6 +67,8 @@ if __name__ == "__main__":
     selection_sort(l5)
     print()
 
+
+
     print("---- Ascending Data ----")
 
     data = RNAGen(100)
@@ -104,4 +106,41 @@ if __name__ == "__main__":
     selection_sort(data)
     print()
 
-    
+
+
+    print("---- Descending Data ----")
+
+    data = RNAGen(100)
+    #print(data)
+    data.sort(reverse=True)
+    #print(data)
+    selection_sort(data)
+    print()
+
+    data = RNAGen(200)
+    #print(data)
+    data.sort(reverse=True)
+    #print(data)
+    selection_sort(data)
+    print()
+
+    data = RNAGen(300)
+    #print(data)
+    data.sort(reverse=True)
+    #print(data)
+    selection_sort(data)
+    print()
+
+    data = RNAGen(400)
+    #print(data)
+    data.sort(reverse=True)
+    #print(data)
+    selection_sort(data)
+    print()
+
+    data = RNAGen(500)
+    #print(data)
+    data.sort(reverse=True)
+    #print(data)
+    selection_sort(data)
+    print()
