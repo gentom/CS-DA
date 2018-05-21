@@ -20,20 +20,29 @@ def timeCounter(name):
         return wrapper
     return _timer
 
+def counter(i):
+    return i + 1
+
 @timeCounter("selection_sort")
 def selection_sort(array):
+    exchageCount = 0
+    turnoverCount = 0
     n = len(array)
     for i in range(0, n-1):
         min = i
         for j in range(i+1, n):
             if array[min] > array[j]:
+                exchageCount = counter(exchageCount)
                 min = j
         tmp = array[min]
         array[min] = array[i]
         array[i] = tmp
+        turnoverCount = counter(turnoverCount)
+    print("ExchangeCountNum: {}".format(exchageCount))
+    print("TurnoverCountNum: {}".format(turnoverCount))
     print(array)
 
 if __name__ == "__main__":
-    l = RNAGen(1000)
+    l = RNAGen(100)
     selection_sort(l)
     print()
