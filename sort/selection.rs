@@ -18,6 +18,26 @@ fn selection_sort(array: &mut [i32]) {
         array[min] = tmp;
     }
 }
+
+
+// TODO: add exchange counter
+// TODO: add turnover counter
+// TODO: add random num array generator
+// TODO: add sorted array in ascending
+// TODO: add sorted array in desending
+fn sort<T: PartialOrd>(source: &mut [T]) {
+    for i in 0..(source.len() - 1) {
+        let mut k = i;
+        for j in (i + 1)..source.len() {
+            if source[j] < source[k] {
+                k = j;
+            }
+        }
+        if k != i {
+            source.swap(i, k);
+        }
+    }
+}
  
 fn main() {
  
